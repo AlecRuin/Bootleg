@@ -34,10 +34,12 @@ it will redirect the user to the /post/UUID route and display the single-post.ha
       image_url is the uuid.png of the image to display. all images are stored in public/images
       caption is the caption for the post. can be optionally empty
       -->
+      {{log "post.img"}}
+      {{log post.img}}
       <div class="username-post">{{user.username}}</div>
       <div class="img-post">
         <a href={{concat "/post/" image_url}}>
-        <img src={{concat "./images/" image_url}}>
+        <img src={{BufferToImg post.img}}>
       </div>
       <h5>{{caption}}</h5>
       </a>

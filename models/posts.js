@@ -11,8 +11,8 @@ posts.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    image_url: {//the UUID of the post
-      type: DataTypes.STRING,
+    img: {
+      type:DataTypes.BLOB,
       allowNull: false,
     },
     caption: {//The top/bottom text to display with the image
